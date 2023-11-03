@@ -1,0 +1,56 @@
+Open-CMSIS-Pack-Taxonomy:
+  Web: https://github.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Taxonomy
+
+  Cclasses:
+    - Cclass: CMSIS
+      Mode: Controlled
+      Description: "Defines the CMSIS Base and CMSIS Extended Software Components."
+      Web: https://arm-software.github.io/CMSIS_6/latest/General/html/index.html
+      Owner: Arm Ltd.
+      Contact: "cmsis@arm.com"
+
+      CGroups:
+        - CGroup: CORE
+  
+        - CGroup: RTOS2
+          Mode: API
+          Description: "Defines the API of the CMSIS-RTOS2. Various implementations are published as software packs such as FreeRTOS, RTX, Segger embOS"
+          Web: https://arm-software.github.io/CMSIS_6/latest/RTOS2/html/index.html
+
+    - Cclass: CMSIS-Driver
+      Mode: Controlled
+      Description: "Device specific software components"
+      Owner: Arm Ltd.
+      Contact: "cmsis@arm.com"
+      Web: https://arm-software.github.io/CMSIS_6/latest/Driver/html/index.html
+
+    - Cclass: Device
+      Mode: Device
+      Description: "Device specific software components"
+      Owner: Arm Ltd.
+      Contact: "cmsis@arm.com"
+      Web: https://arm-software.github.io/CMSIS_6/latest/Core/html/cmsis_device_files.html
+
+      CGroups:
+        - CGroup: Startup
+          Mode: Controlled
+          Description: "Device startup code"
+
+    - Cclass: Network
+      Mode: Bundle
+      Description: "Defines the components of a TCP/IP Stack for IP network communication"
+      Owner: Arm Ltd.
+      Contact: "cmsis@arm.com"
+  
+    - Cclass: AWS IoT
+      Mode: Controlled
+      Description: "Client libraries that connect to specific AWS IoT services"
+      Web: https://docs.aws.amazon.com/freertos/latest/userguide/c-sdk.html
+      Owner: AWS
+  
+    - Cclass: FreeRTOS
+      Mode: Controlled
+      Description: "IoT service libraries that are generic"
+      Web: https://docs.aws.amazon.com/freertos/latest/userguide/c-sdk.html
+      Owner: AWS
+
