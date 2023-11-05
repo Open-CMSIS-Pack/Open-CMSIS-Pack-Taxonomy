@@ -5,7 +5,7 @@ labels: [new Cclass]
 body:
   - type: markdown
     attributes:
-      value: "#Issue: Cclass request"
+      value: "# Issue: Cclass request"
   - type: markdown
     attributes:
       value: >-
