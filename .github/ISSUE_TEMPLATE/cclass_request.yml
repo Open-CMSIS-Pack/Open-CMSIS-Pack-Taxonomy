@@ -38,7 +38,7 @@ body:
     attributes:
       label: Cclass Mode
       description: >-
-      The following **Mode** types allows validation tools to perform checks:
+        The following **Mode** types allows validation tools to perform checks:
 
         - **Mode: Open** is used to allow extensions provided by multiple vendors. Every vendor can add additional Cgroup names. As a component has also a Cvendor, an name clash between different vendors can be resolved. Still it is recommended to avoid name clashes at the Cgroup level.
         - **Mode: Device** is used to define device specific software components. New Cgroup names are allowed, but each component must have a dependency to a device (otherwise similar to Mode: Open).
