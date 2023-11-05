@@ -93,10 +93,13 @@ body:
   - type: textarea
     attributes:
       label: Additional Comments
-      description: >-
+      description: |
         Is there anything else we should know about the new Cclass? 
-
-        Fields marked with an asterisk (*) are required.
       placeholder: 'Example: The request for this Cclass is to enusre that MyStack can be used with other software packs from vendor ...'
     validations:
       required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ** NOTE: Fields marked with an asterisk (*) are required. **
