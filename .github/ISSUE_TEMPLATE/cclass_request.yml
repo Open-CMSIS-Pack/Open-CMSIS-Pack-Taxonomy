@@ -5,9 +5,10 @@ labels: [new Cclass]
 body:
   - type: markdown
     attributes:
+      value: "#Issue: Cclass request"
+  - type: markdown
+    attributes:
       value: >-
-        #Issue: Cclass request
-
         A Component Class (`Cclass`) is the top-level grouping of software components in the Open-CMSIS-Pack system.
         Request a new [`Cclass`](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/cp_PackTutorial.html#cp_TutorialComponents)
         for the [Open-CMSIS-Pack taxonomy](https://github.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Taxonomy). 
