@@ -46,35 +46,49 @@ body:
         - **Mode: Controlled** is used to describe that extensions to the Cclass are possible, but controlled by the Open-CMSIS-Pack working group or by the Owner (=vendor). CMSIS, LVGL, or Memfault could be examples for such a Cclass.
         - **Mode: Bundle** is used to publish a complete software stack with fixed functionality (i.e. File System, TCP/IP stack, etc.). Additional Cgroup names can only be added using the same Cvendor name. It is possible to have multiple bundles that use the same Cclass name.
         - **Mode: API** is used to publish unified API header files. Implementations can be provided by various vendors using a Csub name in the element. Depending on the attribute exclusive one or more implementations may be provided. This mode is triggered by the element <apis> of a software pack.
-      options: [Open, Device, Board, Controlled, Bundle, API]
+      options:
+        - Open
+        - Device
+        - Board
+        - Controlled
+        - Bundle
+        - API
     validations:
       required: true
 
   - type: input
     attributes:
       label: Cclass Owner
-      description: >-
+      description: |
+        The company or organization requesting and maintaining the Cclass.
       placeholder: 'Example: My-Company-Name'
     validations:
       required: true
 
-    - type: input
-      attributes:
-        label: Website
-        description: >-
-          For additional information about the software components you can add a relevant link. You can put "None" if you don't think there's a website.
-        placeholder: 'https://www.open-cmsis-pack.org/'
-      validations:
-        required: false
+  - type: input
+    attributes:
+      label: Website
+      description: >-
+        For additional information about the software components you can add a relevant link.
+        You can put "None" if you don't think there's a website.
+      placeholder: 'https://www.open-cmsis-pack.org/'
+    validations:
+      required: false
 
   - type: input
     attributes:
       label: Contact
-
+      description: >-
+        For contacting you by email you may enter your email address or an support address for your software components. 
+        If you put "None", we contact you using this GitHub issue.
+      placeholder: 'myGroup@My-Company-Name.com'
+    validations:
+      required: true
+      
   - type: textarea
     attributes:
       label: Additional Comments
-      description: |
+      description: >-
         Is there anything else we should know about the new Cclass? 
 
         Fields marked with an asterisk (*) are required.
