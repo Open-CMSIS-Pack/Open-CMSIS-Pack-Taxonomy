@@ -5,17 +5,10 @@ labels: [new Cclass]
 body:
   - type: markdown
     attributes:
-      value: "# Issue: Cclass request"
-  - type: markdown
-    attributes:
       value: >-
-        A Component Class (`Cclass`) is the top-level grouping of software components in the Open-CMSIS-Pack system.
-        Request a new [`Cclass`](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/cp_PackTutorial.html#cp_TutorialComponents)
-        for the [Open-CMSIS-Pack taxonomy](https://github.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Taxonomy). 
-        If this doesn't look right, [choose a different type]<todo: link>.
-
-        Before requesting a new `Cclass` new issue, make sure that it is not covered by an existing `Cclass` in the file
+        Before requesting a new `Cclass` here, make sure that it is not covered by an existing `Cclass` in the file
         [`Open-CMSIS-Pack-Taxonomy.yaml`](https://github.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Taxonomy/blob/main/Open-CMSIS-Pack-Taxonomy.yaml).
+        If this doesn't look right, raise a general [issue](https://github.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Taxonomy/issues/new).
 
   - type: input
     attributes:
@@ -40,18 +33,12 @@ body:
       label: Cclass Mode
       description: >-
         The following **Mode** types allows validation tools to perform checks:
-
-        - **Mode: Open** is used to allow extensions provided by multiple vendors. Every vendor can add additional Cgroup names. As a component has also a Cvendor, an name clash between different vendors can be resolved. Still it is recommended to avoid name clashes at the Cgroup level.
-        
-        - **Mode: Device** is used to define device specific software components. New Cgroup names are allowed, but each component must have a dependency to a device (otherwise similar to Mode: Open).
-        
-        - **Mode: Board** is used to define board specific software components. New Cgroup names are allowed, but each component must have a dependency to a board (otherwise similar to Mode: Open).
-        
-        - **Mode: Controlled** is used to describe that extensions to the Cclass are possible, but controlled by the Open-CMSIS-Pack working group or by the Owner (=vendor). CMSIS, LVGL, or Memfault could be examples for such a Cclass.
-        
-        - **Mode: Bundle** is used to publish a complete software stack with fixed functionality (i.e. File System, TCP/IP stack, etc.). Additional Cgroup names can only be added using the same Cvendor name. It is possible to have multiple bundles that use the same Cclass name.
-        
-        - **Mode: API** is used to publish unified API header files. Implementations can be provided by various vendors using a Csub name in the element. Depending on the attribute exclusive one or more implementations may be provided. This mode is triggered by the element <apis> of a software pack.
+          - ** Open: ** vendors can add additional Cgroup names for their needs. There might be a check for duplicates in other packs.
+          - ** Device: ** device specific software components. There is a check for a device condition as the components are device specific.
+          - ** Board: ** board specific software components. There is a check for a board condition as the components are boards specific.
+          - ** Controlled: ** extensions to the Cclass are possible but controlled by owner (=vendor). CMSIS, LVGL, or Memfault could be examples for such a Cclass.
+          - ** Bundle: ** publish a complete software stack with fixed functionality (i.e. File System, TCP/IP stack, etc.). New vendors can add new bundle names for equivalent functionality.
+          - ** API: ** for controlled API header files at CGroup level. Implementations using Csub can be provided by various vendors.
       options:
         - Open
         - Device
@@ -99,8 +86,3 @@ body:
       placeholder: 'Example: The request for this Cclass is to enusre that MyStack can be used with other software packs from vendor ...'
     validations:
       required: false
-
-  - type: markdown
-    attributes:
-      value: |
-        ** NOTE: Fields marked with an asterisk (*) are required. **
