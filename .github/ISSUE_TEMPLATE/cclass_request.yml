@@ -1,8 +1,6 @@
 name: Cclass request
 description: Request a new Cclass for the Open-CMSIS-Pack taxonomy. 
 labels: [new Cclass]
-value: |
-  Request for
 
 body:
   - type: markdown
