@@ -32,19 +32,19 @@ body:
     attributes:
       label: Cclass Mode
       description: >-
-        The following **Mode** types allows validation tools to perform checks:
+        The following **Mode** types allow validation tools to perform checks:
         
-        - ** Open: ** vendors can add additional Cgroup names for their needs. There might be a check for duplicates in other packs.
+        -**Open:** vendors can add additional Cgroup names for their needs. There might be a check for duplicates in other packs.
         
-        - ** Device: ** device specific software components. There is a check for a device condition as the components are device specific.
+        -**Device:** device specific software components. There is a check for a device condition as the components are device specific.
         
-        - ** Board: ** board specific software components. There is a check for a board condition as the components are boards specific.
+        -**Board:** board specific software components. There is a check for a board condition as the components are boards specific.
         
-        - ** Controlled: ** extensions to the Cclass are possible but controlled by owner (=vendor). CMSIS, LVGL, or Memfault could be examples for such a Cclass.
+        -**Controlled:** extensions to the Cclass are possible but controlled by owner (=vendor). CMSIS, LVGL, or Memfault could be examples for such a Cclass.
         
-        - ** Bundle: ** publish a complete software stack with fixed functionality (i.e. File System, TCP/IP stack, etc.). New vendors can add new bundle names for equivalent functionality.
+        - **Bundle:** publish a complete software stack with fixed functionality (i.e. File System, TCP/IP stack, etc.). New vendors can add new bundle names for equivalent functionality.
         
-        - ** API: ** for controlled API header files at CGroup level. Implementations using Csub can be provided by various vendors.
+        - **API:** for controlled API header files at CGroup level. Implementations using Csub can be provided by various vendors.
       options:
         - Open
         - Device
