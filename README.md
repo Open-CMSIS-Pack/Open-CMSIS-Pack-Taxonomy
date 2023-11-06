@@ -9,7 +9,7 @@ The `Cclass` and `Cgroup` names are used to select software components. The file
 
 Each new `Cclass` name should be registered with an **Mode** (explained below) to avoid conflicts with other software packs.  A `CGroup` name needs to be registered only when there is strict control about the usage.
 
-[**Request a new Cclass name >**](./issues/new?assignees=&labels=new+icon&template=cclass_request.yml)
+[**Request a new Cclass name >**](./issues/new?assignees=&labels=new+Cclass&projects=&template=cclass_request.yml)
 
 The following **Mode** types allows validation tools to perform checks:
 
