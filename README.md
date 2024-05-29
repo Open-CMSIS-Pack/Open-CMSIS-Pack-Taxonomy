@@ -16,17 +16,17 @@ The following **Mode** types allows validation tools to perform checks:
 - **Mode: Open** allows components from multiple vendors. Every vendor can add additional Cgroup names. As a component has also a Cvendor, an name clash between different vendors can be resolved. Still it is recommended to avoid name clashes at the Cgroup level.
 - **Mode: Device** are device specific software components. New Cgroup names are allowed, but each component must have a dependency to a device (otherwise similar to Mode: Open).
 - **Mode: Board** are board specific software components. New Cgroup names are allowed, but each component must have a dependency to a board (otherwise similar to Mode: Open).
-- **Mode: Controlled** are controlled by the Open-CMSIS-Pack working group or by the Owner (=vendor). CMSIS, LVGL, or Memfault could be examples for such a Cclass.
+- **Mode: Controlled** are controlled by the Owner (=vendor). CMSIS, LVGL, or Memfault could be examples for such a Cclass.
 - **Mode: Bundle** publish a complete software stack with fixed functionality (i.e. File System, TCP/IP stack, etc.). Additional Cgroup names can only be added using the same Cvendor name. It is possible to have multiple bundles that use the same Cclass name.
-- **Mode: API** are Cclass names defined with [`<apis>`](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/pdsc_apis_pg.html) and controlled by the Open-CMSIS-Pack working group or by the Owner (=vendor). Driver implementations can be provided by various vendors using a Csub name. Depending on the attribute exclusive one or more implementations may be provided. This mode is triggered by the element [`<apis>`](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/pdsc_apis_pg.html) of a software pack.
+- **Mode: API** are Cclass names defined with [`<apis>`](https://open-cmsis-pack.github.io/Open-CMSIS-Pack-Spec/main/html/pdsc_apis_pg.html) and controlled by the Owner (=vendor). Driver implementations can be provided by various vendors using a Csub name. Depending on the attribute exclusive one or more implementations may be provided.
 
-The implications of the different modes are:
+The long-term implications of the different modes are:
 - **Mode: Open** new Cgroup names are accepted. There might be a check for duplicates in other packs.
 - **Mode: Device** new Cgroup names are accepted. There is a check for a device condition as the components are device specific.
 - **Mode: Board** new Cgroup names are accepted. There is a check for a board condition as the components are boards specific.
-- **Mode: Controlled** Cgroup are checked against Open-CMSIS-Pack-Taxonomy.XML. If not present, rejected.
-- **Mode: Bundle** new Cgroup names are accepted. There is a check that a bundle with name is defined.
-- **Mode: API** same as Mode:Controlled as new APIs can only be added by the Open-CMSIS-Pack working group or by the Owner (=vendor).
+- **Mode: Controlled** components that are not provided by the owner are flagged.
+- **Mode: Bundle** check that a bundle name is unique, otherwise flagged.
+- **Mode: API** same as Mode:Controlled as new APIs can only be added by the Owner (=vendor).
 
 > **Note:**
 >
