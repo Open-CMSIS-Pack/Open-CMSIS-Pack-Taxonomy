@@ -10,19 +10,33 @@ Open-CMSIS-Pack-Taxonomy:
       Contact: "cmsis@arm.com"
 
       CGroups:
-        - CGroup: CORE
-  
+        - CGroup: OS Tick
+          Mode: API
+          Description: "RTOS Kernel system tick timer interface"
+          Web: https://arm-software.github.io/CMSIS_6/latest/Compiler/index.html
+
+        - CGroup: RTOS
+          Mode: API
+          Description: "Defines the API of the CMSIS-RTOS1. Legacy - no longer recommended"
+
         - CGroup: RTOS2
           Mode: API
           Description: "Defines the API of the CMSIS-RTOS2. Various implementations are published as software packs such as FreeRTOS, RTX, Segger embOS"
-          Web: https://arm-software.github.io/CMSIS_6/latest/RTOS2/html/index.html
+          Web: https://arm-software.github.io/CMSIS_6/latest/RTOS2/group__CMSIS__RTOS__TickAPI.html
 
     - Cclass: CMSIS-Driver
-      Mode: Controlled
+      Mode: API
       Description: "Device specific software components"
       Owner: Arm Ltd.
       Contact: "cmsis@arm.com"
       Web: https://arm-software.github.io/CMSIS_6/latest/Driver/html/index.html
+
+    - Cclass: CMSIS-Compiler
+      Mode: API
+      Description: "Device specific software components"
+      Owner: Arm Ltd.
+      Contact: "cmsis@arm.com"
+      Web: https://arm-software.github.io/CMSIS_6/latest/Compiler/index.html
 
     - Cclass: Device
       Mode: Device
@@ -36,12 +50,69 @@ Open-CMSIS-Pack-Taxonomy:
           Mode: Controlled
           Description: "Device startup code"
 
+    - Cclass: Board Support
+      Mode: Board
+      Description: "Board support components, used with Bundle (todo)"
+      Owner: ARM
+      Contact: "cmsis@arm.com"
+
+# this needs review
+    - Cclass: Data Exchange
+      Mode: Open
+      Description: "Software Components for Data Exchange"
+      Owner: ARM
+      Contact: cmsis@arm.com
+
+# this needs review
+    - Cclass: Data Processing
+      Mode: Open
+      Description: "Software Components for Data Processing"
+      Owner: ARM
+      Contact: cmsis@arm.com
+
+    - Cclass: File System
+      Mode: Bundle
+      Description: "Defines the components of a USB Stack"
+      Owner: Arm Ltd.
+      Contact: "cmsis@arm.com"
+
+    - Cclass: Graphics
+      Mode: Bundle
+      Description: "Graphic Display Software Stack"
+      Owner: Arm Ltd.
+      Contact: "cmsis@arm.com"
+  
     - Cclass: Network
       Mode: Bundle
       Description: "Defines the components of a TCP/IP Stack for IP network communication"
       Owner: Arm Ltd.
       Contact: "cmsis@arm.com"
   
+    - Cclass: PSA
+      Mode: API
+      Description: "Platfrom Security Architecture"
+      Owner: Arm Ltd.
+      Contact: "cmsis@arm.com"
+
+    - Cclass: Test
+      Mode: Open
+      Description: "Software Components for Testing"
+      Owner: Arm Ltd.
+      Contact: "cmsis@arm.com"
+
+# this needs review
+    - Cclass: Utilities
+      Mode: Open
+      Description: "Collection of Utilities"
+      Owner: Arm Ltd.
+      Contact: "cmsis@arm.com"
+
+    - Cclass: USB
+      Mode: Bundle
+      Description: "Defines the components of a USB Stack"
+      Owner: Arm Ltd.
+      Contact: "cmsis@arm.com"
+
     - Cclass: AWS IoT
       Mode: Controlled
       Description: "Client libraries that connect to specific AWS IoT services"
@@ -54,3 +125,466 @@ Open-CMSIS-Pack-Taxonomy:
       Web: https://docs.aws.amazon.com/freertos/latest/userguide/c-sdk.html
       Owner: AWS
 
+    # Source pdsc: MindMotion.MM32F103xCxE_DFP.pdsc 1.0.6, Line: 205
+    - Cclass: Board
+      Mode: Board
+      Description: "Board specific components"
+      Owner: MindMotion
+      Contact: unknown
+
+    # Source pdsc: Megawin.CM0_DFP.pdsc 4.4.0, Line: 1144
+    - Cclass: ChipInit_Wizard
+      Mode: Device
+      Description: "Megawin MCU specific configuration wizard"
+      Owner: Megawin 
+      Contact: sales@megawin.com.tw
+
+    # Source pdsc: Maxim.MAX32620.pdsc 1.0.2, Line: 1053 
+    - Cclass: Communications
+      Mode: Device
+      Description: "I2C, SPI, 1-Wire, and UART interface"
+      Owner: Maxim
+      Contact: support@maximintegrated.com
+
+    # Source pdsc: Oryx-Embedded.Middleware.pdsc 2.4.0, Line: 7796
+    - Cclass: CycloneACME
+      Mode: Bundle
+      Description: "Components for the ACME (Automatic Certificate Management Environment) library"
+      Owner: Oryx-Embedded
+      Contact: support@oryx-embedded.com
+
+#=============================================================================
+    # Source pdsc: Oryx-Embedded.Middleware.pdsc 2.4.0, Line: 7878
+    - Cclass: CycloneCRYPTO
+      Mode: Bundle
+      Description: "Components for the CycloneCRYPTO library"
+      Owner: Oryx-Embedded
+      Contact: support@oryx-embedded.com
+
+    # Source pdsc: Oryx-Embedded.Middleware.pdsc 2.4.0, Line: 2065
+    - Cclass: CycloneCommon
+      Mode: Bundle
+      Description: "Common files for all Cyclon libraries"
+      Owner: Oryx-Embedded
+      Contact: support@oryx-embedded.com
+
+    # Source pdsc: Oryx-Embedded.Middleware.pdsc 2.4.2, Line: 7659
+    - Cclass: CycloneEAP
+      Mode: Bundle
+      Description: "802.1X / EAP Library"
+      Owner: Oryx-Embedded
+      Contact: support@oryx-embedded.com
+
+    # Source pdsc: Oryx-Embedded.Middleware.pdsc 2.4.0, Line: 7019
+    - Cclass: CycloneIPSEC
+      Mode: Bundle
+      Description: "Components for the CycloneIPSEC library"
+      Owner: Oryx-Embedded
+      Contact: support@oryx-embedded.com
+
+    # Source pdsc: Oryx-Embedded.Middleware.pdsc 2.4.0, Line: 6442
+    - Cclass: CycloneSSH
+      Mode: Bundle
+      Description: "Components for the CycloneSSH library"
+      Owner: Oryx-Embedded
+      Contact: support@oryx-embedded.com
+
+    # Source pdsc: Oryx-Embedded.Middleware.pdsc 2.4.0, Line: 5697
+    - Cclass: CycloneSSL
+      Mode: Bundle
+      Description: "Components for the Cyclone TLS/DTLS library"
+      Owner: Oryx-Embedded
+      Contact: support@oryx-embedded.com
+
+    # Source pdsc: Oryx-Embedded.Middleware.pdsc 2.4.0, Line: 7665
+    - Cclass: CycloneSTP
+      Mode: Bundle
+      Description: "Components for the CycloneSTP library"
+      Owner: Oryx-Embedded
+      Contact: support@oryx-embedded.com
+
+    # Source pdsc: Oryx-Embedded.Middleware.pdsc 2.4.0, Line: 2288
+    - Cclass: CycloneTCP
+      Mode: Bundle
+      Description: "Dual IPv4/IPv6 Stack"
+      Owner: Oryx-Embedded
+      Contact: support@oryx-embedded.com
+
+#=============================================================================
+    # Source pdsc: Infineon.TLE988x_9x_DFP.pdsc 1.1.0, Line: 469
+    - Cclass: Device Driver
+      Mode: API
+      Description: "API for CAN"
+      Owner: Infineon
+      Contact: unknown
+
+    # Source pdsc: Megawin.CM3_DFP.pdsc 1.2.0, Line: 502  - needs review
+    - Cclass: Driver
+      Mode: Open
+      Description: "Driver selection for MG32F1xx series"
+      Owner: Megawin
+      Contact: sales@megawin.com.tw
+
+    # Source pdsc: \EdgeImpulse.EI-SDK.pdsc 1.7.7, Line: 149
+    - Cclass: EdgeImpulse
+      Mode: Controlled
+      Description: "Edge Impulse SDK"
+      Owner: EdgeImpulse
+      Contact: hello@edgeimpulse.com
+
+    # Source pdsc: EmSA.MicroCANopenDevice.pdsc 1.0.1, Line: 179
+    - Cclass: EmSA
+      Mode: Controlled
+      Description: "Micro CANopen Device Base"
+      Owner: EmSA
+      Contact: libsupport@em-sa.com
+
+    # Source pdsc: Renesas.RA_DFP.pdsc 5.3.0, Line: 2488
+    - Cclass: Flex Software
+      Mode: Device
+      Description: "Renesas RA Configuration"
+      Owner: Renesas
+      Contact: unknown
+
+    # Source pdsc: NXP.FREEMASTER.pdsc 1.0, Line: 348
+    - Cclass: FreeMASTER
+      Mode: Controlled
+      Description: "FreeMaster driver and configuration"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: Maxim.MAX32620.pdsc 1.0.1, Line: 1009
+    - Cclass: HAL
+      Mode: Device
+      Description: "Hardware Access Layer and System Configuration"
+      Owner: Maxim
+      Contact: support@maximintegrated.com
+
+    # Source pdsc: Holtek.HT32_DFP.pdsc 1.0.55, Line: 6228
+    - Cclass: HT32 Stack Usage Analysis
+      Mode: Controlled
+      Description: "HT32 Stack Usage Analysis"
+      Owner: Holtek
+      Contact: unknown
+
+    # Source pdsc: Himax.WE2_DFP.pdsc 1.0.0, Line: 530
+    - Cclass: HimaxPack
+      Mode: Controlled
+      Description: "Himax WE2 library"
+      Owner: Himax
+      Contact: unknown
+
+    # Source pdsc: Megawin.CM0_DFP.pdsc 4.4.0, Line: 3824
+    - Cclass: IEC60730_Support
+      Mode: Device
+      Description: "Run IEC60730 after Reset"
+      Owner: Megawin
+      Contact: sales@megawin.com.tw
+
+    # Source pdsc: Megawin.CM0_DFP.pdsc 4.4.0, Line: 2474
+    - Cclass: IRQ_Handler
+      Mode: Device
+      Description: "IRQ configuration"
+      Owner: Megawin
+      Contact: sales@megawin.com.tw
+
+    # Source pdsc: NXP.MMCAU.pdsc 2.0.0 , Line: 82
+    - Cclass: MMCAU Security
+      Mode: Bundle
+      Description: "NXP library for the Memory-Mapped Cryptographic Acceleration Unit (mmCAU )"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: , Line: NXP.SDMMC.pdsc 2.0.0, Line: 504
+    - Cclass: Memories
+      Mode: Controlled
+      Description: "NXP middleware for sdmmc"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: Megawin.CM0_DFP.pdsc 4.4.0, Line: 2255
+    - Cclass: Middleware
+      Mode: Controlled
+      Description: "Middleware selection for MG32x devices"
+      Owner: Megawin 
+      Contact: sales@megawin.com.tw
+
+    # Source pdsc: NXP.MOTOR_CONTROL.pdsc 1.0.0, Line: 452
+    - Cclass: Motor Control
+      Mode: Controlled
+      Description: "Middleware for Motor Control devices"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: NXP.Multicore.pdsc 11.0.0, Line: 827
+    - Cclass: Multicore
+      Mode: Controlled
+      Description: "Middleware for multicores"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: NXP.Component_OS_Abstraction_Layer.pdsc 2.0.0, Line: 82
+    - Cclass: NXP Component
+      Mode: Controlled
+      Description: "Abstraction layer for OS"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: Cesanta.Mongoose.pdsc 7.13.1, Line: 35
+    - Cclass: Network Library
+      Mode: Controlled
+      Description: "Mongoose HTTP/MQTT/Websocket Library"
+      Owner: Cesanta
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_Examples.pdsc 11.0.0-2.alpha, Line: 3694
+    - Cclass: None
+      Mode: Controlled
+      Description: "Device Firmware Update via ANT wireless"
+      Owner: NordicSemiconductor
+      Contact: unknown
+
+    # Source pdsc: NXP.Middleware.pdsc 10.0.0, Line: 40
+    - Cclass: Operating System
+      Mode: Bundle
+      Description: "Middleware for FreeRTOS"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: Maxim.MAX32620.pdsc 1.0.2, Line: 1024
+    - Cclass: Peripherals
+      Mode: Device
+      Description: "Peripherals for MAX32620 device"
+      Owner: Maxim
+      Contact: support@maximintegrated.com
+
+    # Source pdsc: Sinowealth.SH3xF2xx_DFP.pdsc 2.4.0, Line: 1167
+    - Cclass: Project
+      Mode: Device
+      Description: "Project Template for SH3xF2_Sx devices"
+      Owner: Sinowealth
+      Contact: unknown
+
+    # Source pdsc: MDK-Packs.QCA400x_Host_Driver_SDK.pdsc 1.1.1, Line: 41
+    - Cclass: Qualcomm
+      Mode: Controlled
+      Description: "Qualcomm QCA400x Host Driver SDK (SPI)"
+      Owner: MDK-Packs
+      Contact: unknown
+
+    # Source pdsc: NXP.MOTOR_CONTROL.pdsc 1.0.0, Line: 898
+    - Cclass: RTCESL
+      Mode: Controlled
+      Description: "Real Time Control Embedded Software Library for CM0, CM33F, CM4F, and CM7F core"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: QuantumLeaps.qpcpp.pdsc 7.3.4, Line: 155
+    - Cclass: RTEF
+      Mode: Bundle
+      Description: "QP/C++ Real Time Embedded Framework"
+      Owner: QuantumLeaps
+      Contact: unknown
+
+    # Source pdsc: NXP.RW610_DFP.pdsc 18.0.0, Line: 1764
+    - Cclass: RW610 els_pkc
+      Mode: Device
+      Description: "RW610 Crypto components"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: NXP.RW612_DFP.pdsc 18.0.0, Line: 1767
+    - Cclass: RW612 els_pkc
+      Mode: Device
+      Description: "RW612 Crypto components"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: SodiusWillert.RXF.pdsc 8.0.1, Line: 45
+    - Cclass: RXF
+      Mode: Controlled
+      Description: "Integrate Generated Code from UML Modeling Tool"
+      Owner: SodiusWillert
+      Contact: support@sodiuswillert.com
+
+    # Source pdsc: RealTimeLogic.SMQ.pdsc 38.9.8 , Line: 37
+    - Cclass: SMQ
+      Mode: Controlled
+      Description: "Simple Message Queues (SMQ) IoT protocol"
+      Owner: RealTimeLogic
+      Contact: unknown
+
+    # Source pdsc: NXP.SE_HOSTLIB.pdsc 1.0.0, Line: 91
+    - Cclass: Security Host Library
+      Mode: Controlled
+      Description: "Components for the se_hostlib"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: NXP.LPCXPRESSO55S16-A8961_ISSDK_BSP.pdsc 1.0.1, Line: 113
+    - Cclass: Sensors
+      Mode: Board
+      Description: "Adaptable board project template for the FXLS8961AF sensor"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: RealTimeLogic.SharkSSL-Lite.pdsc 38.9.8, Line: 52
+    - Cclass: SharkSSL
+      Mode: Device
+      Description: "Pre-compiled SharkSSL TLS library for Cortex-M3"
+      Owner: RealTimeLogic
+      Contact: unknown
+
+    # Source pdsc: redlogix.redBlocks-Simulator.pdsc 1.1.4, Line: 74
+    - Cclass: Simulation
+      Mode: Controlled
+      Description: "redBlocks WYSIWYG C Simulator"
+      Owner: redlogix
+      Contact: unknown
+
+    # Source pdsc: Sinowealth.SH3xF2xx_DFP.pdsc 2.4.0 , Line: 734
+    - Cclass: Sino32StdPeripherals
+      Mode: Controlled
+      Description: "Common peripheral drivers for Sino32 Stdlib"
+      Owner: Sinowealth
+      Contact: unknown 
+
+    # Source pdsc: Sinowealth.SH3xF9xx_DFP.pdsc 2.2.0, Line: 1865
+    - Cclass: Sino_TouchKey
+      Mode: Controlled
+      Description: "TouchKey driver for Sino32 Stdlib"
+      Owner: Sinowealth
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_IoT_lwIP.pdsc 1.4.1-1, Line: 116
+    - Cclass: Third Parties
+      Mode: Open
+      Description: "lwIP Stack and MQTT protocol for nRF51 devices"
+      Owner: NordicSemiconductor
+      Contact: unknown
+
+    # Source pdsc: NXP.TINYCBOR.pdsc 1.0.0, Line: 23
+    - Cclass: TinyCBOR
+      Mode: Bundle
+      Description: "Components for the Concise Binary Object Representation (CBOR) Library"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: Maxim.MAX32630.pdsc 0.2.8, Line: 1063
+    - Cclass: Trust Protection Unit
+      Mode: Device
+      Description: "MAX3263x AES Hardware Engine"
+      Owner: Maxim
+      Contact: support@maximintegrated.com
+
+    # Source pdsc: GorgonMeducer.perf_counter.pdsc 2.3.1, Line: 290
+    - Cclass: Utilities
+      Mode: Open
+      Description: "Performance counter and monitor"
+      Owner: GorgonMeducer
+      Contact: unknown
+
+    # Source pdsc: NXP.VIT.pdsc 1.0.0, Line: 169
+    - Cclass: Voice
+      Mode: Device
+      Description: "Voice library components for Cortex M7"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: NXP.EDGEFAST_BT_BLE.pdsc 2.0.0, Line: 1067
+    - Cclass: Wireless
+      Mode: Controlled
+      Description: "Middleware for wireless"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: ELAN.eKTF7020_DFP.pdsc 1.0.1 , Line: 91
+    - Cclass: eKTFxxxx_CodeOption
+      Mode: Controlled
+      Description: "eKTF7020 Code Option"
+      Owner: ELAN
+      Contact: aldrich.syu@emc.com.tw
+
+    # Source pdsc: NXP.NXP_ELE_PKC.pdsc 1.0.0, Line: 321
+    - Cclass: els_pkc
+      Mode: Device
+      Description: "Components for els_pkc of Crypto Lib"
+      Owner: NXP
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_ANT.pdsc 2.0.1-2.alpha, Line: 
+    - Cclass: nRF_ANT
+      Mode: Controlled
+      Description: "Software components for the ANT wireless protocol."
+      Owner: NordicSemiconductor
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_BLE.pdsc 4.0.0-2.alpha, Line: 647
+    - Cclass: nRF_BLE
+      Mode: Controlled
+      Description: "Software components for Bluetooth Low Energy based on Nordic Semiconductor nRF family"
+      Owner: NordicSemiconductor
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_Drivers.pdsc 4.0.0-2.alpha, Line: 682
+    - Cclass: nRF_Drivers
+      Mode: Controlled
+      Description: "Drivers for Nordic Semiconductor nRF family"
+      Owner: NordicSemiconductor
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_Drivers_External.pdsc 1.2.1-2.alpha, Line: 269
+    - Cclass: nRF_Drivers_External
+      Mode: Controlled
+      Description: "Drivers for external hardware used by Nordic Semiconductor nRF family"
+      Owner: NordicSemiconductor
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_IoT_Libraries.pdsc 0.8.0, Line: 241
+    - Cclass: nRF_IoT
+      Mode: Controlled
+      Description: "Software modules for IoT based on Nordic Semiconductor nRF family"
+      Owner: NordicSemiconductor 
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_Libraries.pdsc 4.0.0-2.alpha, Line: 673
+    - Cclass: nRF_Libraries
+      Mode: Controlled
+      Description: "Software modules for the Nordic Semiconductor nRF family"
+      Owner: NordicSemiconductor 
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_NFC.pdsc 1.0.0-2.alpha, Line: 350
+    - Cclass: nRF_NFC
+      Mode: Controlled
+      Description: "NFC services and data modelling support modules for the Nordic Semiconductor nRF family"
+      Owner: NordicSemiconductor 
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_Properitary_RF.pdsc 1.2.3-2.alpha, Line: 266
+    - Cclass: nRF_Properitary_RF
+      Mode: Controlled
+      Description: "Proprietary RF protocols for Nordic Semiconductor nRF family"
+      Owner: NordicSemiconductor 
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_Serialization.pdsc 2.1.0, Line: 1635
+    - Cclass: nRF_Serialization
+      Mode: Controlled
+      Description: "Serialization for Nordic Semiconductor nRF family"
+      Owner: NordicSemiconductor 
+      Contact: unknown
+
+    # Source pdsc: NordicSemiconductor.nRF_SoftDevice_Common.pdsc 2.0.0-2.alpha, Line: 266
+    - Cclass: nRF_SoftDevice
+      Mode: Controlled
+      Description: "Common components for Nordic Semiconductor nRF family SoftDevices"
+      Owner: NordicSemiconductor 
+      Contact: unknown
+
+    # Source pdsc: wolfSSL.wolfSSL.pdsc 5.7.0, Line: 115
+    - Cclass: wolfSSL
+      Mode: Bundle
+      Description: "wolfSSL: SSL/TLS and Crypt Library"
+      Owner: wolfSSL
+      Contact: unknown
